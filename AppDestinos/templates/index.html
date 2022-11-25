@@ -1,0 +1,74 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block codigoDinamico %}
+
+         <!-- banner section start -->
+         <div class="banner_section layout_padding">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container">
+                        <h1 class="banner_taital">DESTINOS</h1>
+                        <p class="banner_text">¡Te ayudamos a elegir tu destino soñado!</p>
+                  
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <h1 class="banner_taital">DESTINOS</h1>
+                        <p class="banner_text">¡Te ayudamos a elegir tu destino soñado!</p>
+                        
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <h1 class="banner_taital">DESTINOS</h1>
+                        <p class="banner_text">¡Te ayudamos a elegir tu destino soñado!</p>
+                      
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- banner section end -->
+      </div>
+      <!-- header section end -->
+      <!-- services section start -->
+      <div class="services_section layout_padding">
+         <div class="container">
+            <h1 class="services_taital">Categorías </h1>
+            <p class="services_text"> Culturas, paísajes, entretenimiento.</p>
+            <div class="services_section_2">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div></div>
+                     <div class="btn_main">
+                        <img src="{% static 'images/mundi.png' %}" class="" style="height: 100px;">
+                        <a href="#">Países</a></div>
+                  </div>
+                  <div class="col-md-4">
+                     <div></div>
+                     <div class="btn_main active">
+                        <img src="{% static 'images/montaña.webp' %}" class="" style="height: 100px;">
+                        <a href="#">Paisajes</a></div>
+                  </div>
+                
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- services section end -->
+     
+      <!-- blog section start -->
+      <div class="blog_section layout_padding">
+         <div class="container">
+            <h1 class="blog_taital"> Publica tu experiencia en nuestor blog.</h1>
+            <p class="blog_text"></p>
+            
+         </div>
+      </div>
+      <!-- blog section end -->
+
+      {% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'padre.html' %}
+    
+{% load static %}
+
+
+
+{% block codigoDinamico %}
+ 
+<div class="banner_section layout_padding">
+   <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+         <div class="carousel-item active">
+            <div class="container">
+               <h1 class="banner_taital">DESTINOS</h1>
+               <p class="banner_text">¡Te ayudamos a elegir tu destino soñado!</p>
+         
+            </div>
+         </div>
+         <div class="carousel-item">
+            <div class="container">
+               <h1 class="banner_taital">DESTINOS</h1>
+               <p class="banner_text">¡Te ayudamos a elegir tu destino soñado!</p>
+               
+            </div>
+         </div>
+         <div class="carousel-item">
+            <div class="container">
+               <h1 class="banner_taital">DESTINOS</h1>
+               <p class="banner_text">¡Te ayudamos a elegir tu destino soñado!</p>
+             
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- banner section end -->
+
+<form action="" method="post"> {% csrf_token %}
+
+   <h3>Cree un destino</h3>
+
+   <table>
+       {{formulario.as_table}}
+   </table>
+
+   <button type="submit" value="Enviar">Enviar</button>
+</form>
+
+{% endblock %}
