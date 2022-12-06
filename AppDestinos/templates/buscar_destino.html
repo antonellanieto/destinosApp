@@ -1,0 +1,27 @@
+{% extends 'padre.html' %}
+    
+{% load static %}
+
+{% block codigoDinamico %}
+
+<form action="" method="get">
+
+    <input type="text" name="email" id="email">
+
+    <input type="submit" value="Buscar">
+
+</form>
+
+{% if destino %}
+
+    <ul>
+    {% for destino in destinos %}
+        <li>Destino {{destinos.nombre_pais}}</li>
+    {% endfor %}
+    </ul>
+
+{% else %}
+    <p>No hay datos</p>
+{% endif %}
+
+{% endblock %}

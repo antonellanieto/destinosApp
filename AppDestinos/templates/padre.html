@@ -56,7 +56,10 @@
                            <a class="nav-link" href="{% url 'Home' %}">Inicio</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="">Categorías</a>
+                           <a href="{% url 'Login' %}">Ingresar</a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="{% url 'CrearUsuario' %}">Crear Usuario</a>
                         </li>
                      
                       
@@ -72,9 +75,11 @@
                <div class="menu_main">
                   <ul>
                      <li class="active"><a href="{% url 'Home' %}">Incio</a></li>
-                     <li><a href="{% url 'Blog' %}">Categorías </a></li>
+                     <li><a href="{% url 'Home' %}">Cargar Destinos </a></li>
 
-                     <li><a href="{% url 'CrearUser' %}">Crear Usuario</a></li>
+                     <li><a href="{% url 'CrearUsuario' %}">Crear Usuario</a></li>
+                     <li><a href="">Buscar Destino</a></li>
+                  </ul>
                   </ul>
                </div>
             </div>
