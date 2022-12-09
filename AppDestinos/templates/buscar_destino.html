@@ -4,9 +4,9 @@
 
 {% block codigoDinamico %}
 
-<form action="" method="get">
+<form style="margin-left: 350px; margin-top: 150px;" action="" method="get">
 
-    <input type="text" name="email" id="email">
+    <input style=" border: none;" type="text"  id="nombre">
 
     <input type="submit" value="Buscar">
 
@@ -14,14 +14,14 @@
 
 {% if destino %}
 
-    <ul>
+    <ul  style="margin-left: 350px; margin-top: 10px;">
     {% for destino in destinos %}
         <li>Destino {{destinos.nombre_pais}}</li>
     {% endfor %}
     </ul>
 
 {% else %}
-    <p>No hay datos</p>
+    <p  style="margin-left: 350px; margin-top: 10px; font-weight: bolder; color: black;">No hay datos</p>
 {% endif %}
 
 {% endblock %}

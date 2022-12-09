@@ -15,34 +15,43 @@ def mostrar_contacto(request):
 
     return render(request, 'contact.html')
 
+def buscar_destino(request):
 
-# def crear_destino(request):
-    
+    if request.GET.get('nombre', False): 
+        nombre_pais = request.GET['nombre']
+        destinos = Destinos.objects.filter(nombre__icontains=nombre_pais)
 
-#     if request.method == 'POST':
-
-#         formulario = CrearDestino(request.POST)
-
-#         if formulario.is_valid():
-
-#             formulario_limpio = formulario.cleaned_data
-#             destino = Destinos(paisaje=formulario_limpio['paisaje'], nombre_pais=formulario_limpio['nombre_pais'],cantidad_poblacion=formulario_limpio['cantidad_poblacion'], descripcion=formulario_limpio['descripcion'],  continente=formulario_limpio['continente'])
-
-#             destino.save()
-
-#             return render(request, 'index.html')
-
-#     else:
-#         formulario = CrearDestino()
-
-#     context = {'formulario': formulario}
-
-#     return render(request, 'blog.html', context)
+        return render(request, 'buscar_destino.html', {'destinos': destinos})
+    else:
+        respuesta = 'No hay datos'
+    return render(request, 'buscar_destino.html', {'respuesta': respuesta})
 
 
-# def eliminar_destino(request, paisaje):
+def crear_destino(request):
 
-#     destino = Paisajes.objects.get(paisaje= paisaje)
-#     destino.delete()
+    if request.method == 'POST':
+
+        formulario = CrearDestino(request.POST)
+
+        if formulario.is_valid():
+
+            formulario_limpio = formulario.cleaned_data
+
+            destino = Destinos(nombre=formulario_limpio['nombre'], paisaje=formulario_limpio['paisaje'], continente=formulario_limpio['continente'], descripcion=formulario_limpio['descripcion'], poblacion = formulario_limpio['poblacion'], imagenes= formulario_limpio['imagenes'])
+
+            destino.save()
+
+            return render(request, 'index.html')
+
+    else:
+        formulario = CrearDestino()
+    return render(request, 'crear_destino.html', {'formulario': CrearDestino})
 
 
+def mostrar_posteos(request):
+
+    destinos = Destinos.objects.all()
+
+    context = {'destinos': destinos}
+
+    return render(request, 'mostrar_posteos.html', context=context)

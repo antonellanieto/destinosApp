@@ -61,6 +61,10 @@
                         <li class="nav-item">
                            <a href="{% url 'CrearUsuario' %}">Crear Usuario</a>
                         </li>
+                        <li class="nav-item">
+                           <a href="{% url 'Buscar' %}"> Buscar Destinos
+                           </a>
+                        </li>
                      
                       
                         <li class="nav-item">
@@ -75,10 +79,17 @@
                <div class="menu_main">
                   <ul>
                      <li class="active"><a href="{% url 'Home' %}">Incio</a></li>
-                     <li><a href="{% url 'Home' %}">Cargar Destinos </a></li>
+                     <li><a href="{% url 'CrearDestino' %}">Cargar Destinos </a></li>
 
                      <li><a href="{% url 'CrearUsuario' %}">Crear Usuario</a></li>
-                     <li><a href="">Buscar Destino</a></li>
+                     <li class="nav-item">
+                        <a href="{% url 'Buscar' %}"> Buscar Destinos
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="{% url 'Publicaciones' %}"> Publicaciones
+                        </a>
+                     </li>
                   </ul>
                   </ul>
                </div>

@@ -1,0 +1,52 @@
+{% extends 'padre.html' %}
+    
+{% load static %}
+
+
+
+{% block codigoDinamico %}
+ 
+
+
+{% for destino in destinos %}
+  
+    <link rel="stylesheet" href="{% static 'css/posteos.css' %}">
+<div id="container">	
+	
+	<div class="product-details">
+		
+	<h1>{{destino.nombre}}</h1>
+   
+		
+   <h3 class="information">{{destino.descripcion}}</h3>
+
+		
+		
+<div class="control">
+	
+	 <span class="price">{{destino.continente}}</span>
+  
+
+</div>
+
+</div>
+	
+<div class="product-image">
+	
+	<img src="{{destino.imagenes}}" alt="">
+	
+
+<div class="info">
+	<h2> Cantidad población:</h2>
+	<p>{{destino.poblacion}}</p>
+    <h2>Paisaje:</h2>
+    <p>{{destino.paisaje}}</p>
+</div>
+</div>
+
+</div>
+
+  
+{% endfor %}
+
+{% endblock %}
