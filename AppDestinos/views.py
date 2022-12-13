@@ -4,6 +4,9 @@ from .models import Destinos
 from .forms import CrearDestino
 import email
 
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+
+
 
 # Create your views here.
 
@@ -53,5 +56,18 @@ def mostrar_posteos(request):
     destinos = Destinos.objects.all()
 
     context = {'destinos': destinos}
+
+    return render(request, 'mostrar_posteos.html', context=context)
+
+
+def eliminar(request, destino_nombre):
+
+    destino = Destinos.objects.get(nombre=destino_nombre)
+
+    destino.delete()
+
+    destino = Destinos.objects.all()
+
+    context = {'destino': destino}
 
     return render(request, 'mostrar_posteos.html', context=context)

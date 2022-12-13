@@ -15,25 +15,30 @@
 	
 	<div class="product-details">
 		
-	<h1>{{destino.nombre}}</h1>
-   
+		<h1>{{destino.nombre}}</h1>
 		
-   <h3 class="information">{{destino.descripcion}}</h3>
-
+		
+		<h3 class="information">{{destino.descripcion}}</h3>
+		
+		
+		
 		
 		
 <div class="control">
 	
-	 <span class="price">{{destino.continente}}</span>
+	 <span class="price"><button><a href="{% url 'Eliminar' destino_nombre=destino.nombre %}">Eliminar</a></button></span>
   
 
 </div>
+<div>
+	<p>{{destino.continente}}</p>
+</div>
 
 </div>
-	
+
 <div class="product-image">
 	
-	<img src="{{destino.imagenes}}" alt="">
+	<img src="{{destinos.imagenes.url}}" alt="">
 	
 
 <div class="info">

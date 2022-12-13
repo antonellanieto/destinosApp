@@ -7,4 +7,6 @@ urlpatterns = [
    path('CrearDestino', views.crear_destino, name='CrearDestino'),
    path('Buscar', views.buscar_destino, name='Buscar'),
    path('Destinos', views.mostrar_posteos, name='Publicaciones'),
+   path('Eliminar/<destino_nombre>', views.eliminar, name='Eliminar'),
 ]
+   
